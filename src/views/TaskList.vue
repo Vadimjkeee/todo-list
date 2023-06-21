@@ -75,10 +75,14 @@ export default {
 			showCreateTaskModal.value = false
 		}
 		const createTask = () => {
-			store.commit('addTask', { ...newTask, id: Date.now() })
-			newTask.title = ''
-			newTask.description = ''
-			showCreateTaskModal.value = false
+			if(newTask.title == '' && newTask.description == '') {
+				alert('Введите название или описание задачи')
+			} else {
+				store.commit('addTask', { ...newTask, id: Date.now() })
+				newTask.title = ''
+				newTask.description = ''
+				showCreateTaskModal.value = false
+			}
 		}
 		const showEditModal = (task) => {
 			editTask.id = task.id
