@@ -19,6 +19,11 @@ p {
   padding: 0;
 }
 
+body {
+  margin: 0;
+}
+
+
 html {
   font-size: 10px;
 }
@@ -65,14 +70,6 @@ button{
   html {
     font-size: calc(10px + 1 * (100vw - 1440px) / 240);
   }
-}
-
-body.open-menu {
-  overflow: hidden;
-}
-
-body.disabled {
-  overflow: hidden;
 }
 
 .container {
