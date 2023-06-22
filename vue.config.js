@@ -1,5 +1,5 @@
-module.exports = {
-  publicPath: process.env.NODE_ENV === 'production'
-    ? '/todo-list/'
-    : '/'
-}
+const { defineConfig } = require('@vue/cli-service')
+module.exports = defineConfig({
+  publicPath: `/todo-list/`,
+  transpileDependencies: true
+})
